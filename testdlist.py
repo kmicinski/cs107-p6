@@ -23,9 +23,9 @@ class TestDLList(unittest.TestCase):
         dl.add(2)
         dl.add(4)
         dlb = DLList()
-        dl.add(1)
-        dl.add(2)
-        dl.add(4)
+        dlb.add(1)
+        dlb.add(2)
+        dlb.add(4)
         self.assertEqual(dl, dlb)
 
     def test_remove(self):
