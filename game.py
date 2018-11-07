@@ -132,8 +132,8 @@ class Game:
         height = level["height"]
         self.board = GameBoard(self.cfg, level["width"], level["height"])
         # Load these if they aren't specified via the command line
-        startX = self.startX or level["startX"]
-        startY = self.startY or level["startY"]
+        startX = self.startX if self.startX != None else level["startX"]
+        startY = self.startY if self.startY != None else level["startY"]
 
         # Create the main character and place him on the screen
         self.mainCharacter = Squirrel((startX,startY), self.board)
