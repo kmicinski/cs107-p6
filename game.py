@@ -139,8 +139,8 @@ class Game:
         self.mainCharacter = Squirrel((startX,startY), self.board)
 
         # Optionally load the start and end x values
-        endX = self.endX or level["endX"]
-        endY = self.endY or level["endY"]
+        endX = self.endX if self.endX != None else level["endX"]
+        endY = self.endY if self.endY != None else level["endY"]
         self.endX = endX
         self.endY = endY
 
